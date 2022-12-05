@@ -66,6 +66,12 @@
         resize: none;
 
     }
+
+    @media only screen and (max-width: 600px) {
+    .x{
+        display: none;
+    }
+}
 </style>
 
 <body>
@@ -162,10 +168,10 @@
                     <div style="display: flex; align-items:center">
                         <input placeholder="Search Driver Application" class="form-control w-full" >
                     </div>
-                    <button class="btn btn-light gap-2">
+                    <button class="btn btn-light x gap-2">
                         <i class="fa fa-search" aria-hidden="true"></i>Search
                     </button>
-                    <button class="btn btn-light">
+                    <button class="btn btn-light x">
                         <i class="fa fa-plus" aria-hidden="true"></i>
                         Add</button>
                 </div>
