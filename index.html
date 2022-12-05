@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" />
+    <title>89driveradmin panel</title>
+</head>
+<style>
+    body{
+        background-color: blue;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-image: url('../assets/bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card{
+        background-color: white;
+        width:350px;
+        height: 450px;
+        opacity: 0.93;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-top: 100px;
+         padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo{
+        width: 100px;
+        height: 100px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 20px;
+        position: absolute;
+        top: -50px;
+        left: 125px;
+       
+    }
+    label{
+        color: gray;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    input{
+        background-color: whitesmoke;
+        opacity: 1;
+        padding: 7px 15px;
+        border-radius:5px;
+        border: none;
+    }
+    .horixon{
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+</style>
+<body>
+    
+    <div class="card shadow-lg">
+        <form>
+            <div class="logo bg-success">89 Driver</div>
+            <label for="phone">Phone Number</label>
+            <input placeholder="Phone Number" id="phone" class="input shadow-sm" >
+            <label for="password">Password</label>
+            <input shadow-sm placeholder="password" type="password" id="password" class="input shadow-sm" >
+            <div class="horixon">
+                <div style="display: flex; align-items: center">
+                    <input type="checkbox" id="checkbox" >
+                    <p for="checkbox" style="margin: 0; margin-left: 10px; font-size: 14px;">Remember Me</p>
+                </div>
+                <a href="./src/Dashboard.html" id="btn" class="btn btn-success">Sign In</a>
+            </div>
+
+            <label style="position: absolute; bottom: 5px; color: lightgray">89 Drivers</label>
+        </form>
+    </div>
+</body>
+</html>
