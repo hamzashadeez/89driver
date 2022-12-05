@@ -20,6 +20,10 @@
 
 .chart{
     background-color: white;
+    width: 350px;
+}
+
+.chart img{
     width: 100%;
 }
 
