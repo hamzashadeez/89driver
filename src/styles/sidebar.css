@@ -65,6 +65,7 @@
     background-color: #ebf3ef;
     max-height: 400px;
     overflow-y: scroll;
+    z-index: 100;
 }
 
 #open_mobile{
