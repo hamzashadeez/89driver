@@ -1,230 +1,221 @@
+<!-- https://www.figma.com/file/Ll8U0JpfwZXF3ZlRnP1coT/89-Driver-Admin-dashboard?node-id=0%3A1&t=0OlWjUywnfsOVT6C-0 -->
 <!DOCTYPE html>
-<html>
-  <head>
-    <title></title>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="keywords" content="HTML, CSS, JavaScript">
-<link rel="stylesheet" 
-href=
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../src/styles/dashboard.css">
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="../src/styles/sidebar.css">
+    <link rel="stylesheet" href="../src/styles/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <title>Driver Application</title>
+</head>
+
+<style>
+    .form_div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 15px 25px
+    }
+
+    .d-flexx {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .d-flexx>div>h5 {
+        margin-bottom: 0;
+    }
+
+    .d-flexx>div>p {
+        font-size: 14px;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        margin-top: 20px;
+    }
+
+    .flex p {
+        margin-bottom: 0;
+    }
+
+    li {
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    li h5 {
+        margin-bottom: 0;
+    }
+
+    textarea {
+        resize: none;
+
+    }
+</style>
+
+<body>
+    <div class="page">
+        <div id="sidebar" class="sidebar shadow-sm">
+            <div class="header ">
+                <h3>89 Driver</h3>
+                <div id="close" class="btn btn-default">&times;</div>
+            </div>
+            <a href="./Dashboard.html" class="listItem shadow-sm ">
+                <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                <div class="label">Dashboard</div>
+            </a>
+            <a href="./Sendmessage.html" class="listItem shadow-sm ">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <div class="label">Send Message</div>
+            </a>
+            <a href="./DriverApplication.html" class="listItem shadow-sm active">
+                <i class="fa fa-car" aria-hidden="true"></i>
+                <div class="label">Driver Application</div>
+            </a>
+            <a href="./Review.html" class="listItem shadow-sm">
+                <i class="fa fa-certificate" aria-hidden="true"></i>
+                <div class="label">Reviews</div>
+            </a>
+            <a href="./BookingRequest.html" class="listItem shadow-sm">
+                <i class="fa fa-list-alt" aria-hidden="true"></i>
+                <div class="label">Booking Requests</div>
+            </a>
+            <a href="./ContactEnquiries.html" class="listItem shadow-sm">
+                <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                <div class="label">Contact Enquiries</div>
+            </a>
+            <a href="#" class="listItem shadow-sm">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <div class="label">Country View</div>
+            </a>
+            <a href="#" class="listItem shadow-sm">
+                <i class="fa fa-coffee" aria-hidden="true"></i>
+                <div class="label">Restaurant</div>
+            </a>
+        </div>
+        <!--  -->
+        <div style="width: 100%; position: relative;">
+            <div class="tab">
+                <div>
+                    <button id="open" style="display: none" class="btn btn-secondary">Open</button>
+                </div>
+
+                <button id="open_mobile" class="btn btn-success">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div id="mobile_menu" style="display: none" class="mobile_menu p-3">
+                <div class="header ">
+                    <h5>89 Driver</h5>
+                    <div id="close_menu" class="btn btn-default">&times;</div>
+                </div>
+                <a href="./Dashboard.html" class="listItem shadow-sm ">
+                    <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                    <div class="label">Dashboard</div>
+                </a>
+                <a href="./Sendmessage.html" class="listItem shadow-sm">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <div class="label">Send Message</div>
+                </a>
+                <a href="./DriverApplication.html" class="listItem shadow-sm">
+                    <i class="fa fa-car" aria-hidden="true"></i>
+                    <div class="label">Driver Application</div>
+                </a>
+                <a href="./Review.html" class="listItem shadow-sm">
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    <div class="label">Reviews</div>
+                </a>
+                <a href="./BookingRequest.html" class="listItem shadow-sm">
+                    <i class="fa fa-list-alt" aria-hidden="true"></i>
+                    <div class="label">Booking Requests</div>
+                </a>
+                <a href="./ContactEnquiries.html" class="listItem shadow-sm">
+                    <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                    <div class="label">Contact Enquiries</div>
+                </a>
+                <a href="#" class="listItem shadow-sm">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <div class="label">Country View</div>
+                </a>
+                <a href="#" class="listItem shadow-sm">
+                    <i class="fa fa-coffee" aria-hidden="true"></i>
+                    <div class="label">Restaurant</div>
+                </a>
+            </div>
+            <div class="form_div">
+                <div class="d-flexx">
+                    <div style="display: flex; align-items:center">
+                        <input placeholder="Search Driver Application" class="form-control w-full" >
+                    </div>
+                    <button class="btn btn-light gap-2">
+                        <i class="fa fa-search" aria-hidden="true"></i>Search
+                    </button>
+                    <button class="btn btn-light">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        Add</button>
+                </div>
+
+            </div>
+            <img src="../assets/table.png" style="width: 100%;" >
+           
+        </div>
+
+    </div>
+    </div>
 
     <script>
-      // $('.sub-b')
+        const sidebar = document.getElementById('sidebar');
+        const openBtn = document.getElementById('open');
+        const mobile_menu = document.getElementById('mobile_menu');
+
+        document.getElementById('close').addEventListener("click", ()=>{
+            sidebar.style.display ="none"
+            openBtn.style.display ="block"
+        })
+
+        document.getElementById('open').addEventListener("click", ()=>{
+            sidebar.style.display ="block"
+            openBtn.style.display ="none"
+        })
+
+        document.getElementById('open_mobile').addEventListener("click", ()=>{
+            if(mobile_menu.style.display === 'none'){
+                console.log(mobile_menu.style.display);
+                mobile_menu.style.display ="block"
+            }else{
+                mobile_menu.style.display ="none"
+                console.log(mobile_menu.style.display);
+            }
+            // openBtn.style.display ="none"
+        })
+        document.getElementById('close_menu').addEventListener("click", ()=>{
+            if(mobile_menu.style.display === 'none'){
+                console.log(mobile_menu.style.display);
+                mobile_menu.style.display ="block"
+            }else{
+                mobile_menu.style.display ="none"
+                console.log(mobile_menu.style.display);
+            }
+            // openBtn.style.display ="none"
+        })
+
+
     </script>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-  />
-    <link rel="stylesheet" 
-    href=
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../src/Style.css"/>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="profile">
-        <img src="../assets/own.png" width="110px" height="80px" />
-        <button class="sidebar-toggle">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-        <div class="sidebar">
-         <div class="sidebargroupitem"id ="side" >
-          <button class="close-btn"><i class="fas fa-times"></i></button>
-          <ul>
-            <li >
-              <a href="Dashborard.html" >
-               <div class="inactive">
-                <span class="icon"><img src="../assets/Graph.png"/></span>
-                <span class="item" >Dashboard</span>
-               </div>
-              </a>
-            </li>
-            <li>
-              <a href="Sendmessage.html" class="">
-                <div class="active">
-                  <span class="icon"><img src="../assets/Message.png"/></span>
-                <span class="item">Send Message</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="DriverApplication.html" class="">
-                <div class="inactive">
-                  <span class="icon"><img src="../assets/bxs_taxi.png"/></span>
-                <span class="item">Driver Application</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="Review.html" class="">
-                <div class="inactive">
-                  <span class="icon"><img src="../assets/Discount.png"/></span>
-                <span class="item">Reviews</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="BookingRequest.html" class="">
-                <div class="inactive">
-                  <span class="icon"><img src="../assets/bxs_taxi.png"/></span>
-                <span class="item">Booking Request</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="ContactEnquiries.html" class="">
-                <div class="inactive">
-                  <span class="icon"><img src="../assets/Message.png"/></span>
-                <span class="item">Contact Enquiries</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="CountryView.html" class="">
-                <div class="inactive">
-                  <span class="icon"><img src="../assets/visibility.png"/></span>
-                <span class="item">Country View</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="" class="">
-                <div class="inactive">
-                  <span class="icon"><img src="../assets/storefront.png"/></span>
-                <span class="item">Resturant</span>
-                <span class="icondrop"><img src="../assets/dropdown.png" width="30px" height="30px" /></span>
-                </div>
-              </a>
-              <div>
-        
-                <input type="radio" placeholder="Resturant" id="Resturant">
-                <label for="Resturant">Resturant</label>
-                <p>
-                  <input type="radio" placeholder="Resturant" id="Add New Resturant">
-                <label for="Add New Resturant">Add New Resturant</label>
-                </p>
-              </div>
-            </li>
-            <li>
-              <a href="" class="">
-                <div class="inactive">
-                  <span class="icon"><img src="../assets/Graph.png"/></span>
-                <span class="item">Dashboard</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="" class="">
-                <div class="inactive">
-                  <span class="icon"><img src="../assets/Graph.png"/></span>
-                <span class="item">Dashboard</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="" class="">
-                <div class="inactive">
-                  <span class="icon"><img src="../assets/Graph.png"/></span>
-                <span class="item">Dashboard</span>
-                </div>
-              </a>
-            </li>
-          </ul>
-         </div>
-        </div>
-      <nav class="nav">
-        <div class="coant">
-        <div style="display: flex;justify-content:space-between">
-          <div class="input-grop">
-            <input placeholder="search..." type="search" style="height:40px;border-width: 0;margin: 1px;">
-            <div class="search-icon" style="background-color: blue;color:white;width: 45px;">
-              <i class="fa fa-search icon" style="padding:12px; font-size: 20px;"></i>
-            </div>
-          </div>
-          <div>
-            <a href="">
-              <div style="border-radius: 5px; background-color: blue;display: flex;margin: 5px 0px;">
-                <p style="color: white;font-size:17px;font-weight:700px;padding-top: 10px;padding-bottom: 10px;padding-left: 0px;">ADD</p>
-                <div style="background-color: white;color: blue;margin: 5px;border-radius: 4px;"><i class="fa fa-plus icon" style="padding:10px; font-size: 15px;"></i></div>
-              </div>
-            </a>
-          </div>
-        </div>
-        </div>
-        
-        <div class="table-content">
-          <table class="table-driver">
-            <tr>
-              <th>ID</th>
-              <th>First Name</th>
-              <th>Middle Name</th>
-              <th>Last Name</th>
-              <th>Driver's License</th>
-              <th>State</th>
-              <th>SSN</th>
-              <th>Vehicle <br> Details</th>
-           </tr>
-           <tr>
-            <td>1</td>
-            <td>Lorem</td>
-            <td>Lorem</td>
-            <td>Lorem</td>
-            <td>40-234-354</td>
-            <td>Alabam</td>
-            <td>123-456-7890</td>
-            <td><a href="VehicleDetails.html"><img src="../assets/Swap.png"></a></td>
-           </tr>
+</body>
 
-           <tr>
-            <td>2</td>
-            <td>Lorem</td>
-            <td>Lorem</td>
-            <td>Lorem</td>
-            <td>40-234-354</td>
-            <td>Alabam</td>
-            <td>123-456-7890</td>
-            <td><a href="VehicleDetails.html"><img src="../assets/Swap.png"></a></td>
-           </tr>
-
-           <tr>
-            <td>3</td>
-            <td>Lorem</td>
-            <td>Lorem</td>
-            <td>Lorem</td>
-            <td>40-234-354</td>
-            <td>Alabam</td>
-            <td>123-456-7890</td>
-            <td><a href="VehicleDetails.html"><img src="../assets/Swap.png"></a></td>
-           </tr>
-
-           <tr>
-            <td>4</td>
-            <td>Lorem</td>
-            <td>Lorem</td>
-            <td>Lorem</td>
-            <td>40-234-354</td>
-            <td>Alabam</td>
-            <td>123-456-7890</td>
-            <td><a href="VehicleDetails.html"><img src="../assets/Swap.png"></a></td>
-           </tr>
-
-           <tr>
-            <td>5</td>
-            <td>Lorem</td>
-            <td>Lorem</td>
-            <td>Lorem</td>
-            <td>40-234-354</td>
-            <td>Alabam</td>
-            <td>123-456-7890</td>
-            <td><a href="VehicleDetails.html"><img src="../assets/Swap.png"></a></td>
-           </tr>
-          </table>
-        </div>
-      </nav>
-      
-    </div>
-    <script src="app.js"></script>
-  </body>
 </html>
