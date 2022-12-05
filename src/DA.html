@@ -1,0 +1,218 @@
+<!-- https://www.figma.com/file/Ll8U0JpfwZXF3ZlRnP1coT/89-Driver-Admin-dashboard?node-id=0%3A1&t=0OlWjUywnfsOVT6C-0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../src/styles/dashboard.css">
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="../src/styles/sidebar.css">
+    <link rel="stylesheet" href="../src/styles/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <title>Driver Application</title>
+</head>
+
+<style>
+    .form_div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 15px 25px
+    }
+
+    .d-flexx {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .d-flexx>div>h5 {
+        margin-bottom: 0;
+    }
+
+    .d-flexx>div>p {
+        font-size: 14px;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        margin-top: 20px;
+    }
+
+    .flex p {
+        margin-bottom: 0;
+    }
+
+    li {
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    li h5 {
+        margin-bottom: 0;
+    }
+
+    textarea {
+        resize: none;
+
+    }
+</style>
+
+<body>
+    <div class="page">
+        <div id="sidebar" class="sidebar shadow-sm">
+            <div class="header ">
+                <h3>89 Driver</h3>
+                <div id="close" class="btn btn-default">&times;</div>
+            </div>
+            <a href="./Dashboard.html" class="listItem shadow-sm ">
+                <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                <div class="label">Dashboard</div>
+            </a>
+            <a href="./Sendmessage.html" class="listItem shadow-sm ">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <div class="label">Send Message</div>
+            </a>
+            <a href="./DriverApplication.html" class="listItem shadow-sm active">
+                <i class="fa fa-car" aria-hidden="true"></i>
+                <div class="label">Driver Application</div>
+            </a>
+            <a href="./Review.html" class="listItem shadow-sm">
+                <i class="fa fa-certificate" aria-hidden="true"></i>
+                <div class="label">Reviews</div>
+            </a>
+            <a href="./BookingRequest.html" class="listItem shadow-sm">
+                <i class="fa fa-list-alt" aria-hidden="true"></i>
+                <div class="label">Booking Requests</div>
+            </a>
+            <a href="./ContactEnquiries.html" class="listItem shadow-sm">
+                <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                <div class="label">Contact Enquiries</div>
+            </a>
+            <a href="#" class="listItem shadow-sm">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <div class="label">Country View</div>
+            </a>
+            <a href="#" class="listItem shadow-sm">
+                <i class="fa fa-coffee" aria-hidden="true"></i>
+                <div class="label">Restaurant</div>
+            </a>
+        </div>
+        <!--  -->
+        <div style="width: 100%; position: relative;">
+            <div class="tab">
+                <div>
+                    <button id="open" style="display: none" class="btn btn-secondary">Open</button>
+                </div>
+
+                <button id="open_mobile" class="btn btn-success">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div id="mobile_menu" style="display: none" class="mobile_menu p-3">
+                <div class="header ">
+                    <h5>89 Driver</h5>
+                    <div id="close_menu" class="btn btn-default">&times;</div>
+                </div>
+                <a href="./Dashboard.html" class="listItem shadow-sm ">
+                    <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                    <div class="label">Dashboard</div>
+                </a>
+                <a href="./Sendmessage.html" class="listItem shadow-sm">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <div class="label">Send Message</div>
+                </a>
+                <a href="./DriverApplication.html" class="listItem shadow-sm">
+                    <i class="fa fa-car" aria-hidden="true"></i>
+                    <div class="label">Driver Application</div>
+                </a>
+                <a href="./Review.html" class="listItem shadow-sm">
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    <div class="label">Reviews</div>
+                </a>
+                <a href="./BookingRequest.html" class="listItem shadow-sm">
+                    <i class="fa fa-list-alt" aria-hidden="true"></i>
+                    <div class="label">Booking Requests</div>
+                </a>
+                <a href="./ContactEnquiries.html" class="listItem shadow-sm">
+                    <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                    <div class="label">Contact Enquiries</div>
+                </a>
+                <a href="#" class="listItem shadow-sm">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <div class="label">Country View</div>
+                </a>
+                <a href="#" class="listItem shadow-sm">
+                    <i class="fa fa-coffee" aria-hidden="true"></i>
+                    <div class="label">Restaurant</div>
+                </a>
+            </div>
+            <div class="form_div">
+                <div class="d-flexx">
+                    <div>
+                        <h5>Driver's Application</h5>
+                       
+                    </div>
+                    <button class="btn btn-light">
+                        Refresh</button>
+                </div>
+
+            </div>
+            <img src="../assets/table.png" style="width: 100%;" >
+           
+        </div>
+
+    </div>
+    </div>
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const openBtn = document.getElementById('open');
+        const mobile_menu = document.getElementById('mobile_menu');
+
+        document.getElementById('close').addEventListener("click", ()=>{
+            sidebar.style.display ="none"
+            openBtn.style.display ="block"
+        })
+
+        document.getElementById('open').addEventListener("click", ()=>{
+            sidebar.style.display ="block"
+            openBtn.style.display ="none"
+        })
+
+        document.getElementById('open_mobile').addEventListener("click", ()=>{
+            if(mobile_menu.style.display === 'none'){
+                console.log(mobile_menu.style.display);
+                mobile_menu.style.display ="block"
+            }else{
+                mobile_menu.style.display ="none"
+                console.log(mobile_menu.style.display);
+            }
+            // openBtn.style.display ="none"
+        })
+        document.getElementById('close_menu').addEventListener("click", ()=>{
+            if(mobile_menu.style.display === 'none'){
+                console.log(mobile_menu.style.display);
+                mobile_menu.style.display ="block"
+            }else{
+                mobile_menu.style.display ="none"
+                console.log(mobile_menu.style.display);
+            }
+            // openBtn.style.display ="none"
+        })
+
+
+    </script>
+</body>
+
+</html>
