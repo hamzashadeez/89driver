@@ -141,15 +141,15 @@
                         </div>
                     </div>
                 </section>
-                <div class="view_2">
-                    <div class="chart shadow-sm">
-                        <img src="../assets/Rides.png" >
+                <div  class="view_2">
+                    <div id="piechart" class="chart shadow">
+                       
                     </div>
-                    <div class="chart shadow-sm">
-                        <img src="../assets/OfflineUsers.png" >
+                    <div id="piechart2" class="chart shadow">
+                        
                     </div>
-                    <div class="chart shadow-sm">
-                        <img src="../assets/OnlineUsers.png" >
+                    <div id="piechart3" class="chart shadow">
+                        
                     </div>
                     <!-- <div class="chart shadow-sm">
                         <img src="../assets/Rides.png" >
@@ -159,7 +159,51 @@
 
         </div>
     </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
 
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Completed',     11],
+          ['Cancelled',      2],
+          ['Active',  2],
+          ['Requests', 2],
+          
+        ]);
+        var data2 = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Driver',     11],
+          ['Restaurant Owners',      22]
+        ]);
+        var data3 = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Driver',     50],
+          ['Restaurant Owners',      12]
+        ]);
+
+        var options = {
+          title: 'Rides'
+        };
+        var options2 = {
+          title: 'Offline Users'
+        };
+        var options3 = {
+          title: 'Online Users'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+        var chart3 = new google.visualization.PieChart(document.getElementById('piechart3'));
+
+        chart.draw(data, options);
+        chart2.draw(data2, options2);
+        chart3.draw(data3, options3);
+      }
+    </script>
     <script>
         const sidebar = document.getElementById('sidebar');
         const openBtn = document.getElementById('open');
